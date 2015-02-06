@@ -309,7 +309,7 @@ public abstract class FlagValue<T> {
 
         @Override
         public HashSet<PlotBlock> parse(final String t) {
-        	HashSet<PlotBlock> list = new HashSet<PlotBlock>();
+        	HashSet<PlotBlock> list = new HashSet<>();
             for (String item : t.split(",")) {
             	String[] split = item.split(":");
             	byte data;

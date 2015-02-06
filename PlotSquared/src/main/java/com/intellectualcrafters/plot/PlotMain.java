@@ -42,7 +42,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.UUID;
 
-import me.confuser.barapi.BarAPI;
+//import me.confuser.barapi.BarAPI;
 import net.milkbowl.vault.economy.Economy;
 
 import org.bukkit.Bukkit;
@@ -168,7 +168,7 @@ public class PlotMain extends JavaPlugin implements Listener {
     /**
      * BarAPI object
      */
-    public static BarAPI barAPI = null;
+//    public static BarAPI barAPI = null;
     /**
      * World Guard Object
      */
@@ -1379,9 +1379,9 @@ public class PlotMain extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new ForceFieldListener(), this);
         // Default flags
 
-        if (getServer().getPluginManager().getPlugin("BarAPI") != null) {
-            barAPI = (BarAPI) getServer().getPluginManager().getPlugin("BarAPI");
-        }
+//        if (getServer().getPluginManager().getPlugin("BarAPI") != null) {
+//            barAPI = (BarAPI) getServer().getPluginManager().getPlugin("BarAPI");
+//        }
         if (getServer().getPluginManager().getPlugin("WorldEdit") != null) {
             worldEdit = (WorldEditPlugin) getServer().getPluginManager().getPlugin("WorldEdit");
 

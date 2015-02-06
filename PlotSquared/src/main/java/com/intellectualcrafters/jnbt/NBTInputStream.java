@@ -110,7 +110,7 @@ public final class NBTInputStream implements Closeable {
                 final int childType = this.is.readByte();
                 length = this.is.readInt();
 
-                final List<Tag> tagList = new ArrayList<Tag>();
+                final List<Tag> tagList = new ArrayList<>();
                 for (int i = 0; i < length; ++i) {
                     final Tag tag = readTagPayload(childType, "", depth + 1);
                     if (tag instanceof EndTag) {
@@ -121,7 +121,7 @@ public final class NBTInputStream implements Closeable {
 
                 return new ListTag(name, NBTUtils.getTypeClass(childType), tagList);
             case NBTConstants.TYPE_COMPOUND:
-                final Map<String, Tag> tagMap = new HashMap<String, Tag>();
+                final Map<String, Tag> tagMap = new HashMap<>();
                 while (true) {
                     final Tag tag = readTag(depth + 1);
                     if (tag instanceof EndTag) {

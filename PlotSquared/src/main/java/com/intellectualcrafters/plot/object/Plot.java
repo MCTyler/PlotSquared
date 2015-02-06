@@ -110,7 +110,7 @@ import com.intellectualcrafters.plot.util.UUIDHandler;
         this.trusted = new ArrayList<>();
         this.settings.setAlias("");
         this.delete = false;
-        this.settings.flags = new HashSet<Flag>();
+        this.settings.flags = new HashSet<>();
         this.world = world;
     }
 
@@ -132,7 +132,7 @@ import com.intellectualcrafters.plot.util.UUIDHandler;
         this.trusted = new ArrayList<>();
         this.settings.setAlias("");
         this.delete = false;
-        this.settings.flags = new HashSet<Flag>();
+        this.settings.flags = new HashSet<>();
         this.world = world;
     }
 
@@ -165,7 +165,7 @@ import com.intellectualcrafters.plot.util.UUIDHandler;
         if (flags != null) {
             this.settings.flags = flags;
         } else {
-            this.settings.flags = new HashSet<Flag>();
+            this.settings.flags = new HashSet<>();
         }
         this.world = world;
     }
@@ -194,7 +194,7 @@ import com.intellectualcrafters.plot.util.UUIDHandler;
         if (flags != null) {
             this.settings.flags = flags;
         } else {
-            this.settings.flags = new HashSet<Flag>();
+            this.settings.flags = new HashSet<>();
         }
         this.world = world;
     }

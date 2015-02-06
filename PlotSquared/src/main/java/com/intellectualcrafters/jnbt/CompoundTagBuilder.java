@@ -16,7 +16,7 @@ public class CompoundTagBuilder {
      * Create a new instance.
      */
     CompoundTagBuilder() {
-        this.entries = new HashMap<String, Tag>();
+        this.entries = new HashMap<>();
     }
 
     /**
@@ -182,7 +182,7 @@ public class CompoundTagBuilder {
      * @return the new compound tag
      */
     public CompoundTag build() {
-        return new CompoundTag(new HashMap<String, Tag>(this.entries));
+        return new CompoundTag(new HashMap<>(this.entries));
     }
 
     /**
@@ -193,7 +193,7 @@ public class CompoundTagBuilder {
      * @return the created compound tag
      */
     public CompoundTag build(final String name) {
-        return new CompoundTag(name, new HashMap<String, Tag>(this.entries));
+        return new CompoundTag(name, new HashMap<>(this.entries));
     }
 
 }

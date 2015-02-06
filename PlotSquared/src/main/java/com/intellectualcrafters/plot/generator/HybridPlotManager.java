@@ -203,7 +203,7 @@ import com.intellectualcrafters.plot.util.SendChunk;
         int sx = loc.x << 4;
         int sz = loc.z << 4;
         
-        HashSet<Chunk> chunks = new HashSet<Chunk>();
+        HashSet<Chunk> chunks = new HashSet<>();
         
         for (int x = sx; x < sx + 16; x++) {
             for (int z = sz; z < sz + 16; z++) {

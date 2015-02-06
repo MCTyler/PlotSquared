@@ -42,7 +42,7 @@ public class DebugSaveTest extends SubCommand {
     @Override
     public boolean execute(final Player plr, final String... args) {
         if (plr == null) {
-            final ArrayList<Plot> plots = new ArrayList<Plot>();
+            final ArrayList<Plot> plots = new ArrayList<>();
             plots.addAll(PlotMain.getPlots());
             DBFunc.createPlots(plots);
             DBFunc.createAllSettingsAndHelpers(plots);

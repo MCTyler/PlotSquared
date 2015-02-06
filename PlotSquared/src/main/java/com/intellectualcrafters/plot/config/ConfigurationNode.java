@@ -76,7 +76,7 @@ public class ConfigurationNode {
             return Arrays.asList((String[]) this.value);
         }
         else if (this.value instanceof Object[]) {
-            List<String> values = new ArrayList<String>();
+            List<String> values = new ArrayList<>();
             for (Object value : (Object[]) this.value) {
                 values.add(value.toString());
             }

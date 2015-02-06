@@ -104,7 +104,7 @@ import com.intellectualcrafters.plot.util.UUIDHandler;
         String arg = args[0].toLowerCase();
         PlotId id = getId(arg);
         if (id != null) {
-            HashSet<Integer> ids = new HashSet<Integer>();
+            HashSet<Integer> ids = new HashSet<>();
             int DBid = DBFunc.getId(worldname, id);
             if (DBid != Integer.MAX_VALUE) {
                 ids.add(DBid);

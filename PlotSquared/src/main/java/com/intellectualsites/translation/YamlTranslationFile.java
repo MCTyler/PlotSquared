@@ -65,7 +65,7 @@ public class YamlTranslationFile extends TranslationFile {
      * Reload
      */
     public void reload() {
-        this.map = new HashMap<String, String>();
+        this.map = new HashMap<>();
         this.read();
     }
 
@@ -92,7 +92,7 @@ public class YamlTranslationFile extends TranslationFile {
     public YamlTranslationFile fancyHeader(final String... header) {
         final String line = "################################################################################################";
         final int lineLength = line.length();
-        final List<String> strings = new ArrayList<String>();
+        final List<String> strings = new ArrayList<>();
         strings.add(line + "\n");
         for (String s : header) {
             s = "# " + s;
@@ -199,7 +199,7 @@ public class YamlTranslationFile extends TranslationFile {
             e.printStackTrace();
         }
         if (this.map == null) {
-            this.map = new HashMap<String, String>();
+            this.map = new HashMap<>();
         }
         for (final Map.Entry<String, String> objects : this.map.entrySet()) {
             final String key = objects.getKey();

@@ -66,7 +66,7 @@ public final class CompoundTag extends Tag {
      * @return the builder
      */
     public CompoundTagBuilder createBuilder() {
-        return new CompoundTagBuilder(new HashMap<String, Tag>(this.value));
+        return new CompoundTagBuilder(new HashMap<>(this.value));
     }
 
     /**

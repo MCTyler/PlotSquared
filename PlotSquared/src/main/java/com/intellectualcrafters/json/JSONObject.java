@@ -69,7 +69,7 @@ public class JSONObject {
      * Construct an empty JSONObject.
      */
     public JSONObject() {
-        this.map = new HashMap<String, Object>();
+        this.map = new HashMap<>();
     }
 
     /**
@@ -153,7 +153,7 @@ public class JSONObject {
      * @throws JSONException
      */
     public JSONObject(final Map<String, Object> map) {
-        this.map = new HashMap<String, Object>();
+        this.map = new HashMap<>();
         if (map != null) {
             for (final Entry<String, Object> entry : map.entrySet()) {
                 final Object value = entry.getValue();

@@ -121,7 +121,7 @@ public class ClusterManager {
 	    if (!clusters.containsKey(world)) {
 	        return new HashSet<>();
 	    }
-	    HashSet<PlotCluster> list = new HashSet<PlotCluster>();
+	    HashSet<PlotCluster> list = new HashSet<>();
 	    for (PlotCluster cluster : clusters.get(world)) {
 	        if (intersects(cluster, id)) {
 	            list.add(cluster);

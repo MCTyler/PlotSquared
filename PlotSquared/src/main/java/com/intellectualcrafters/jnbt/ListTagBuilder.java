@@ -23,7 +23,7 @@ public class ListTagBuilder {
     ListTagBuilder(final Class<? extends Tag> type) {
         checkNotNull(type);
         this.type = type;
-        this.entries = new ArrayList<Tag>();
+        this.entries = new ArrayList<>();
     }
 
     /**
@@ -97,7 +97,7 @@ public class ListTagBuilder {
      * @return the new list tag
      */
     public ListTag build() {
-        return new ListTag(this.type, new ArrayList<Tag>(this.entries));
+        return new ListTag(this.type, new ArrayList<>(this.entries));
     }
 
     /**
@@ -108,7 +108,7 @@ public class ListTagBuilder {
      * @return the created list tag
      */
     public ListTag build(final String name) {
-        return new ListTag(name, this.type, new ArrayList<Tag>(this.entries));
+        return new ListTag(name, this.type, new ArrayList<>(this.entries));
     }
 
 }

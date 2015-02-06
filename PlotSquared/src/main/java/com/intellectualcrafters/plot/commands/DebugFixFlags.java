@@ -67,7 +67,7 @@ public class DebugFixFlags extends SubCommand {
         PlayerFunctions.sendMessage(plr, "&8--- &6Starting task &8 ---");
         for (Plot plot : PlotMain.getPlots(world).values()) {
             Set<Flag> flags = plot.settings.flags;
-            ArrayList<Flag> toRemove = new ArrayList<Flag>();
+            ArrayList<Flag> toRemove = new ArrayList<>();
             for (Flag flag : flags) {
                 AbstractFlag af = FlagManager.getFlag(flag.getKey());
                 if (af == null) {

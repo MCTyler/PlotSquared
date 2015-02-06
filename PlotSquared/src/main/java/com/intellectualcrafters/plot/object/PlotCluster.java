@@ -14,8 +14,8 @@ public class PlotCluster {
 	public PlotSettings settings;
 	public UUID owner;
 
-	public HashSet<UUID> helpers = new HashSet<UUID>();
-	public HashSet<UUID> invited = new HashSet<UUID>();
+	public HashSet<UUID> helpers = new HashSet<>();
+	public HashSet<UUID> invited = new HashSet<>();
 	
 	private PlotId pos1;
 	private PlotId pos2;

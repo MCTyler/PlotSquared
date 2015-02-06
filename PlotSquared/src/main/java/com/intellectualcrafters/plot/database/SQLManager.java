@@ -548,8 +548,8 @@ public class SQLManager implements AbstractDB {
             if (PlotMain.config.contains("worlds")) {
                 worlds = PlotMain.config.getConfigurationSection("worlds").getKeys(false);
             }
-            final HashMap<String, UUID> uuids = new HashMap<String, UUID>();
-            final HashMap<String, Integer> noExist = new HashMap<String, Integer>();
+            final HashMap<String, UUID> uuids = new HashMap<>();
+            final HashMap<String, Integer> noExist = new HashMap<>();
 
             /*
              * Getting plots
@@ -698,7 +698,7 @@ public class SQLManager implements AbstractDB {
                             flags_string = new String[]{};
                         }
                     }
-                    final Set<Flag> flags = new HashSet<Flag>();
+                    final Set<Flag> flags = new HashSet<>();
                     boolean exception = false;
                     for (final String element : flags_string) {
                         if (element.contains(":")) {
@@ -800,7 +800,7 @@ public class SQLManager implements AbstractDB {
     }
 
     public void setFlags(final int id, final Flag[] flags) {
-        final ArrayList<Flag> newflags = new ArrayList<Flag>();
+        final ArrayList<Flag> newflags = new ArrayList<>();
         for (final Flag flag : flags) {
             if ((flag != null) && (flag.getKey() != null) && !flag.getKey().equals("")) {
                 newflags.add(flag);
@@ -948,7 +948,7 @@ public class SQLManager implements AbstractDB {
      */
     @Override
     public HashMap<String, Object> getSettings(final int id) {
-        final HashMap<String, Object> h = new HashMap<String, Object>();
+        final HashMap<String, Object> h = new HashMap<>();
         PreparedStatement stmt = null;
         try {
             stmt = this.connection.prepareStatement("SELECT * FROM `" + this.prefix + "plot_settings` WHERE `plot_plot_id` = ?");
@@ -1025,7 +1025,7 @@ public class SQLManager implements AbstractDB {
 
     @Override
     public ArrayList<PlotComment> getComments(final String world, final Plot plot, final int tier, boolean below) {
-        final ArrayList<PlotComment> comments = new ArrayList<PlotComment>();
+        final ArrayList<PlotComment> comments = new ArrayList<>();
         try {
             final PreparedStatement statement;
             String comparison = below ? ">=" : "=";
@@ -1316,8 +1316,8 @@ public class SQLManager implements AbstractDB {
             if (PlotMain.config.contains("worlds")) {
                 worlds = PlotMain.config.getConfigurationSection("worlds").getKeys(false);
             }
-            final HashMap<String, UUID> uuids = new HashMap<String, UUID>();
-            final HashMap<String, Integer> noExist = new HashMap<String, Integer>();
+            final HashMap<String, UUID> uuids = new HashMap<>();
+            final HashMap<String, Integer> noExist = new HashMap<>();
 
             /*
              * Getting clusters
@@ -1449,7 +1449,7 @@ public class SQLManager implements AbstractDB {
                             flags_string = new String[]{};
                         }
                     }
-                    final Set<Flag> flags = new HashSet<Flag>();
+                    final Set<Flag> flags = new HashSet<>();
                     boolean exception = false;
                     for (final String element : flags_string) {
                         if (element.contains(":")) {
@@ -1667,7 +1667,7 @@ public class SQLManager implements AbstractDB {
 
 	@Override
 	public HashMap<String, Object> getClusterSettings(int id) {
-		final HashMap<String, Object> h = new HashMap<String, Object>();
+		final HashMap<String, Object> h = new HashMap<>();
         PreparedStatement stmt = null;
         try {
             stmt = this.connection.prepareStatement("SELECT * FROM `" + this.prefix + "cluster_settings` WHERE `cluster_id` = ?");

@@ -38,12 +38,12 @@ public class TranslationManager {
      * @param translationObjects pre-init
      */
     public TranslationManager(final TranslationObject[] translationObjects) {
-        this.translationObjects = new LinkedList<TranslationObject>(Arrays.asList(translationObjects));
-        this.translatedObjects = new LinkedHashMap<String, TranslationAsset>();
+        this.translationObjects = new LinkedList<>(Arrays.asList(translationObjects));
+        this.translatedObjects = new LinkedHashMap<>();
     }
 
     public static List<TranslationObject> transformEnum(final Object[] os) {
-        final List<TranslationObject> eList = new ArrayList<TranslationObject>();
+        final List<TranslationObject> eList = new ArrayList<>();
         for (final Object o : os) {
             eList.add(new TranslationObject(o.toString(), o.toString().toLowerCase().replace("_", " "), "", ""));
         }
